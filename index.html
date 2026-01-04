@@ -207,6 +207,29 @@
       font-size: 0.95rem;
     }
 
+    /* Collapsible card text */
+    .card-content {
+      max-height: 6.6em; /* approx 4 lines */
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+      margin-top: 1.25rem; /* extra spacing between gallery and text */
+    }
+
+    .card-content.expanded {
+      max-height: 200vh;
+    }
+
+    .show-more {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: transparent;
+      border: none;
+      color: var(--accent);
+      cursor: pointer;
+      font-weight: 700;
+      padding: 0;
+    }
+
     footer {
       text-align: center;
       padding: 3rem 2rem 4rem;
@@ -266,13 +289,15 @@
           <!-- video thumbnail: set data-type="video" and data-src to the mp4 web path -->
           <!-- <img src="SPIRoDemo.mov" data-src="SPIRoDemo.mov" data-type="video" alt="SPIRo demo" class="media-thumb video" /> -->
         </div>
-        <p>
-          SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account for the necessary leak detection sensors and equipment.
-        </p>
-        <p>
-          Also implemented on the robot is a multimodal deep feature fusion with a deep forest ensemble learning model to improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time detection applications.
-        </p>
-        <span class="tag">Computer Vision</span>
+        <div class="card-content">
+          <p>
+            SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account for the necessary leak detection sensors and equipment.
+          </p>
+          <p>
+            Also implemented on the robot is a multimodal deep feature fusion with a deep forest ensemble learning model to improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time detection applications.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
       </div>
       <div class="card">
         <h3>AI for Trauma Surgery</h3>
@@ -284,18 +309,24 @@
           <img src="PurdueACIVS2.jpg" data-src="PurdueACIVS2.jpg" alt="PurdueACIVS 2" class="media-thumb" />
           <img src="PurdueACIVS3.jpg" data-src="PurdueACIVS3.jpg" alt="PurdueACIVS 3" class="media-thumb" />
         </div>
-        <p>
-          Developing an AI-guided medical system to support trauma procedures in
-          resource-limited environments.
-        </p>
+        <div class="card-content">
+          <p>
+            Developing an AI-guided medical system to support trauma procedures in
+            resource-limited environments.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag">Machine Learning</span>
       </div>
       <div class="card">
         <h3>Energy Inequality Analysis</h3>
-        <p>
-          Used LLMs, satellite imagery, and permit data to uncover disparities in
-          energy efficiency across income levels.
-        </p>
+        <div class="card-content">
+          <p>
+            Used LLMs, satellite imagery, and permit data to uncover disparities in
+            energy efficiency across income levels.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag">Data + Policy</span>
       </div>
     </div>
@@ -306,18 +337,24 @@
     <div class="grid">
       <div class="card">
         <h3>Tech for Global Health</h3>
-        <p>
-          Building scalable tools that bring expert-level guidance to places where
-          infrastructure is limited.
-        </p>
+        <div class="card-content">
+          <p>
+            Building scalable tools that bring expert-level guidance to places where
+            infrastructure is limited.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag" style="background: rgba(34,197,94,0.15); color: var(--accent-2);">Startup</span>
       </div>
       <div class="card">
         <h3>Product Design & Prototyping</h3>
-        <p>
-          Translating research insights into usable, real-world systems through
-          rapid iteration and testing.
-        </p>
+        <div class="card-content">
+          <p>
+            Translating research insights into usable, real-world systems through
+            rapid iteration and testing.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag">Innovation</span>
       </div>
     </div>
@@ -328,18 +365,24 @@
     <div class="grid">
       <div class="card">
         <h3>Houseless Environmental Volunteers Initiative</h3>
-        <p>
-          Supporting environmental restoration while providing stipends exclusively
-          to unhoused individuals for their work.
-        </p>
+        <div class="card-content">
+          <p>
+            Supporting environmental restoration while providing stipends exclusively
+            to unhoused individuals for their work.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag">Social Impact</span>
       </div>
       <div class="card">
         <h3>STEM Outreach</h3>
-        <p>
-          Mentoring students and expanding access to hands-on STEM education
-          through workshops and community programs.
-        </p>
+        <div class="card-content">
+          <p>
+            Mentoring students and expanding access to hands-on STEM education
+            through workshops and community programs.
+          </p>
+        </div>
+        <button class="show-more" aria-expanded="false">Show more</button>
         <span class="tag">Education</span>
       </div>
     </div>
@@ -394,6 +437,17 @@
           const type = el.getAttribute('data-type') || '';
           if(!src) return;
           openMedia(src, type);
+        });
+      });
+
+      // show-more toggle handlers
+      document.querySelectorAll('.show-more').forEach(function(btn){
+        btn.addEventListener('click', function(){
+          const wrapper = btn.previousElementSibling;
+          if(!wrapper || !wrapper.classList.contains('card-content')) return;
+          const expanded = wrapper.classList.toggle('expanded');
+          btn.textContent = expanded ? 'Show less' : 'Show more';
+          btn.setAttribute('aria-expanded', expanded);
         });
       });
 
