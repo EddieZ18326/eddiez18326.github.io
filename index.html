@@ -63,14 +63,16 @@
       margin-top: 2.5rem;
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 2rem;
     }
 
     nav a {
-      color: var(--muted);
+      color: #ffffff;
       text-decoration: none;
-      font-weight: 500;
-      transition: color 0.2s ease;
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: 0.02em;
+      transition: color 0.2s ease, transform 0.15s ease;
     }
 
     nav a:hover {
@@ -93,7 +95,7 @@
 
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: 1fr;
       gap: 1.5rem;
     }
 
@@ -112,7 +114,7 @@
 
     .card h3 {
       font-size: 1.25rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 1.0rem;
     }
 
     .card p {
@@ -149,11 +151,13 @@
         width: 48%;
         max-width: 220px;
       }
+      nav a {
+        font-size: 1.05rem;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>Eddie Zhang</h1>
     <img src="Eddie_Profile_Photo.jpg" alt="Eddie Zhang" class="profile-photo">
@@ -164,13 +168,20 @@
     <nav>
       <a href="#research">Research</a>
       <a href="#entrepreneurship">Entrepreneurship</a>
-      <a href="#service">Community Service</a>
+      <a href="#service">Leadership and Community Service</a>
     </nav>
   </header>
 
   <section id="research">
     <h2>🔬 Research</h2>
-    <div>
+    <div class="grid">
+      <div class="card">
+        <h3>SPIRo</h3>
+        <p>
+          SPIRo — Soft Pipe Inspection Robot.
+        </p>
+        <span class="tag">Computer Vision</span>
+      </div>
       <div class="card">
         <h3>AI for Trauma Surgery</h3>
         <p>
@@ -213,7 +224,7 @@
   </section>
 
   <section id="service">
-    <h2>🤝 Community Service</h2>
+    <h2>🤝 Leadership and Community Service</h2>
     <div class="grid">
       <div class="card">
         <h3>Houseless Environmental Volunteers Initiative</h3>
