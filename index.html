@@ -49,6 +49,16 @@
       margin-right: auto;
     }
 
+    .profile-photo {
+      display: block;
+      margin: 1rem auto;
+      width: 260px;
+      max-width: 55%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.5);
+    }
+
     nav {
       margin-top: 2.5rem;
       display: flex;
@@ -135,6 +145,10 @@
       header h1 {
         font-size: 2.3rem;
       }
+      .profile-photo {
+        width: 48%;
+        max-width: 220px;
+      }
     }
   </style>
 </head>
@@ -142,9 +156,10 @@
 
   <header>
     <h1>Eddie Zhang</h1>
+    <img src="Eddie_Profile_Photo.jpg" alt="Eddie Zhang" class="profile-photo">
     <p>
-      Exploring the intersection of <strong>research</strong>, <strong>entrepreneurship</strong>,
-      and <strong>community service</strong> through technology.
+      Hi! I am Eddie Zhang, a high school senior passionated about building stuff leveraging computer vision.
+      Thanks for stopping by!
     </p>
     <nav>
       <a href="#research">Research</a>
@@ -155,7 +170,7 @@
 
   <section id="research">
     <h2>🔬 Research</h2>
-    <div class="grid">
+    <div>
       <div class="card">
         <h3>AI for Trauma Surgery</h3>
         <p>
