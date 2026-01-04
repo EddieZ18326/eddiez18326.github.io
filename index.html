@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Eddie Zhang | Portfolio</title>
   <meta name="description" content="Research, entrepreneurship, and community service portfolio." />
@@ -136,6 +137,76 @@
       color: var(--accent);
     }
 
+    /* Media gallery inside cards */
+    .media-gallery {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .media-thumb {
+      width: 240px;
+      height: 180px;
+      object-fit: cover;
+      position: relative;
+      border-radius: 10px;
+      cursor: pointer;
+      border: 1px solid rgba(255,255,255,0.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+    }
+
+    .media-thumb.video::after {
+      content: '▶';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+      color: rgba(255,255,255,0.95);
+      font-weight: 800;
+      font-size: 32px;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+      pointer-events: none;
+    }
+
+    /* Simple modal */
+    .media-modal {
+      position: fixed;
+      inset: 0;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      background: rgba(2,6,23,0.8);
+      z-index: 9999;
+      padding: 2rem;
+    }
+
+    .media-modal.open { display: flex; }
+
+    .media-modal-content {
+      max-width: 1100px;
+      width: 100%;
+      max-height: 85vh;
+    }
+
+    .media-modal img,
+    .media-modal video {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+      max-height: 85vh;
+    }
+
+    .media-modal-close {
+      margin-top: 0.5rem;
+      color: var(--muted);
+      text-align: right;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
     footer {
       text-align: center;
       padding: 3rem 2rem 4rem;
@@ -164,10 +235,10 @@
 <body>
   <header>
     <h1>Eddie Zhang</h1>
-    <img src="Eddie_Profile_Photo.jpg" alt="Eddie Zhang" class="profile-photo">
+    <img src="EddieProfilePhoto.jpg" alt="Eddie Zhang" class="profile-photo">
     <p>
-      Hi! I am Eddie Zhang, a high school senior passionated about building stuff leveraging computer vision.
-      Thanks for stopping by!
+      Hi! I am Eddie Zhang, a high school senior passionated about building stuff leveraging machine learning and computer vision.
+      Thank you for stopping by!
     </p>
     <nav>
       <a href="#research">Research</a>
@@ -180,9 +251,26 @@
     <h2>🔬 Research</h2>
     <div class="grid">
       <div class="card">
-        <h3>SPIRo</h3>
+        <h3>SPIRo: Soft Pipe Inspection Robot</h3>
+        <div class="media-gallery" aria-label="SPIRo media gallery">
+          <img src="SPIRoRotate.gif" data-src="SPIRoRotate.gif" alt="SPIRo 1" class="media-thumb" />
+          <img src="SPIRoCrawl.jpg" data-src="SPIRoCrawl.jpg" alt="SPIRo 1" class="media-thumb" />
+          <img src="SPIRoProgression.png" data-src="SPIRoProgression.png" alt="SPIRo 2" class="media-thumb" />
+          <img src="SPIRoJSHS01.jpg" data-src="SPIRoJSHS01.jpg" alt="SPIRo 3" class="media-thumb" />
+          <img src="SPIRoJSHS02.jpg" data-src="SPIRoJSHS02.jpg" alt="SPIRo 3" class="media-thumb" />
+          <!-- <img src="SPIRoJSHS03.jpg" data-src="SPIRoJSHS03.jpg" alt="SPIRo 3" class="media-thumb" /> -->
+          <img src="SPIRoMETEC1.jpg" data-src="SPIRoMETEC1.jpg" alt="SPIRo 3" class="media-thumb" />
+          <img src="SPIRoMETEC2.jpg" data-src="SPIRoMETEC2.jpg" alt="SPIRo 3" class="media-thumb" />
+          <img src="SPIRoMETEC3.jpg" data-src="SPIRoMETEC3.jpg" alt="SPIRo 3" class="media-thumb" />
+          <img src="SPIRoHome1.jpg" data-src="SPIRoHome1.jpg" alt="SPIRo 3" class="media-thumb" />
+          <!-- video thumbnail: set data-type="video" and data-src to the mp4 web path -->
+          <!-- <img src="SPIRoDemo.mov" data-src="SPIRoDemo.mov" data-type="video" alt="SPIRo demo" class="media-thumb video" /> -->
+        </div>
         <p>
-          SPIRo — Soft Pipe Inspection Robot.
+          SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account for the necessary leak detection sensors and equipment.
+        </p>
+        <p>
+          Also implemented on the robot is a multimodal deep feature fusion with a deep forest ensemble learning model to improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time detection applications.
         </p>
         <span class="tag">Computer Vision</span>
       </div>
@@ -252,6 +340,60 @@
   <footer>
     © <span>2025</span> Eddie Zhang · Built for GitHub Pages
   </footer>
+
+  <!-- Media modal (single shared modal for thumbnails) -->
+  <div id="mediaModal" class="media-modal" role="dialog" aria-hidden="true">
+    <div class="media-modal-content" id="mediaModalContent"></div>
+    <div class="media-modal-close" id="mediaModalClose">Close · click outside or press Esc</div>
+  </div>
+
+  <script>
+    (function(){
+      const modal = document.getElementById('mediaModal');
+      const modalContent = document.getElementById('mediaModalContent');
+      const modalClose = document.getElementById('mediaModalClose');
+
+      function openMedia(src, type){
+        modalContent.innerHTML = '';
+        if(type === 'video' || (src && src.endsWith('.mp4'))){
+          const v = document.createElement('video');
+          v.src = src;
+          v.controls = true;
+          v.autoplay = true;
+          modalContent.appendChild(v);
+        } else {
+          const i = document.createElement('img');
+          i.src = src;
+          i.alt = '';
+          modalContent.appendChild(i);
+        }
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+      }
+
+      function closeMedia(){
+        modal.classList.remove('open');
+        modal.setAttribute('aria-hidden','true');
+        // stop video if present
+        const v = modalContent.querySelector('video');
+        if(v){ v.pause(); v.src = ''; }
+        modalContent.innerHTML = '';
+      }
+
+      document.querySelectorAll('.media-thumb').forEach(function(el){
+        el.addEventListener('click', function(){
+          const src = el.getAttribute('data-src');
+          const type = el.getAttribute('data-type') || '';
+          if(!src) return;
+          openMedia(src, type);
+        });
+      });
+
+      modalClose.addEventListener('click', closeMedia);
+      modal.addEventListener('click', function(e){ if(e.target === modal) closeMedia(); });
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeMedia(); });
+    })();
+  </script>
 
 </body>
 </html>
