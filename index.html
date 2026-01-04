@@ -106,8 +106,8 @@
       border-radius: 1rem;
       padding: 1.75rem;
       transition: transform 0.25s ease, border-color 0.25s ease;
-      /* responsive width: min 320px, fluid with viewport, max 1400px; reduced side margins */
-      width: clamp(320px, calc(100vw - 1rem), 1400px);
+      /* responsive width: min 320px, fluid with viewport, max 1299px; slightly smaller side margins */
+      width: clamp(320px, calc(100vw - 0.5rem), 1299px);
       margin: 0 auto 1rem auto;
       box-sizing: border-box;
     }
@@ -168,6 +168,30 @@
       font-size: 32px;
       text-shadow: 0 2px 6px rgba(0,0,0,0.6);
       pointer-events: none;
+    }
+
+    /* Captions under thumbnails implemented with a sibling element */
+    .media-thumb { display: block; }
+    .media-caption {
+      display: block;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      text-align: center;
+      max-width: 240px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .media-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      width: 240px;
     }
 
     /* Simple modal */
@@ -266,7 +290,7 @@
     <nav>
       <a href="#research">Research</a>
       <a href="#entrepreneurship">Entrepreneurship</a>
-      <a href="#service">Leadership and Community Service</a>
+      <a href="#service">Leadership in Community</a>
     </nav>
   </header>
 
@@ -276,7 +300,7 @@
       <div class="card">
         <h3>SPIRo: Soft Pipe Inspection Robot</h3>
         <div class="media-gallery" aria-label="SPIRo media gallery">
-          <img src="SPIRoRotate.gif" data-src="SPIRoRotate.gif" alt="SPIRo 1" class="media-thumb" />
+          <img src="SPIRoRotate.gif" data-src="SPIRoRotate.gif" data-caption="SPIRo Animation" alt="SPIRo 1" class="media-thumb" />
           <img src="SPIRoCrawl.jpg" data-src="SPIRoCrawl.jpg" alt="SPIRo 1" class="media-thumb" />
           <img src="SPIRoProgression.png" data-src="SPIRoProgression.png" alt="SPIRo 2" class="media-thumb" />
           <img src="SPIRoJSHS01.jpg" data-src="SPIRoJSHS01.jpg" alt="SPIRo 3" class="media-thumb" />
@@ -287,7 +311,7 @@
           <img src="SPIRoMETEC3.jpg" data-src="SPIRoMETEC3.jpg" alt="SPIRo 3" class="media-thumb" />
           <img src="SPIRoHome1.jpg" data-src="SPIRoHome1.jpg" alt="SPIRo 3" class="media-thumb" />
           <!-- video thumbnail: set data-type="video" and data-src to the mp4 web path -->
-          <!-- <img src="SPIRoDemo.mov" data-src="SPIRoDemo.mov" data-type="video" alt="SPIRo demo" class="media-thumb video" /> -->
+          <img src="SPIRoDemo.mp4" data-src="SPIRoDemo.mp4" data-type="video" alt="SPIRo demo" class="media-thumb video" />
         </div>
         <div class="card-content">
           <p>
@@ -361,7 +385,7 @@
   </section>
 
   <section id="service">
-    <h2>🤝 Leadership and Community Service</h2>
+    <h2>🤝 Leadership in Community</h2>
     <div class="grid">
       <div class="card">
         <h3>Houseless Environmental Volunteers Initiative</h3>
@@ -438,6 +462,42 @@
           if(!src) return;
           openMedia(src, type);
         });
+      });
+
+      // Ensure each thumbnail has a visible caption: prefer data-caption, fall back to alt or filename
+      document.querySelectorAll('.media-thumb').forEach(function(el){
+        let caption = el.getAttribute('data-caption');
+        if(!caption){
+          const alt = el.getAttribute('alt');
+          if(alt && alt.trim()) caption = alt.trim();
+          else {
+            const src = el.getAttribute('data-src') || el.getAttribute('src') || el.src || '';
+            caption = (src.split('/').pop() || '').split('?')[0] || '';
+          }
+          el.setAttribute('data-caption', caption);
+        }
+
+        // If the image isn't already grouped, wrap it in a .media-item container
+        const parent = el.parentNode;
+        if(!parent.classList || !parent.classList.contains('media-item')){
+          const wrapper = document.createElement('div');
+          wrapper.className = 'media-item';
+          parent.insertBefore(wrapper, el);
+          wrapper.appendChild(el);
+          // move any immediately following caption nodes into wrapper (if any)
+        }
+
+        // Ensure the caption span exists inside the wrapper and contains the caption text
+        const wrapperEl = el.parentNode;
+        let captionSpan = wrapperEl.querySelector('.media-caption');
+        if(!captionSpan){
+          captionSpan = document.createElement('span');
+          captionSpan.className = 'media-caption';
+          captionSpan.textContent = caption;
+          wrapperEl.appendChild(captionSpan);
+        } else {
+          captionSpan.textContent = caption;
+        }
       });
 
       // show-more toggle handlers
