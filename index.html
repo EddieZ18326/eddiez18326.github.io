@@ -246,13 +246,40 @@
     .show-more {
       display: inline-block;
       margin-top: 0.5rem;
-      background: transparent;
+      background: var(--accent);
       border: none;
-      color: var(--accent);
+      color: #042a3a;
       cursor: pointer;
-      font-weight: 700;
-      padding: 0;
+      font-weight: 800;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
     }
+    .show-more:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(2,6,23,0.12); }
+    .show-more:focus { outline: 3px solid rgba(56,189,248,0.18); outline-offset: 2px; }
+    /* details/summary used for expandable Learn More */
+    .card-details {
+      margin-top: 0.5rem;
+    }
+    .card-details summary {
+      list-style: none;
+      cursor: pointer;
+      color: #042a3a;
+      font-weight: 800;
+      background: var(--accent);
+      border: none;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+    }
+    .card-details summary:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(2,6,23,0.12); }
+    .card-details summary:focus { outline: 3px solid rgba(56,189,248,0.18); outline-offset: 2px; }
+    .card-details summary::-webkit-details-marker { display: none; }
+    .card-details .card-content { max-height: 6.6em; }
+    .card-details[open] .card-content { max-height: 200vh; }
 
     footer {
       text-align: center;
@@ -313,18 +340,20 @@
           <!-- video thumbnail: set data-type="video" and data-src to the mp4 web path -->
           <img src="SPIRoDemo.mp4" data-src="SPIRoDemo.mp4" data-type="video" alt="SPIRo demo" class="media-thumb video" />
         </div>
-        <div class="card-content">
-          <p>
-            SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account for the necessary leak detection sensors and equipment.
-          </p>
-          <p>
-            Also implemented on the robot is a multimodal deep feature fusion with a deep forest ensemble learning model to improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time detection applications.
-          </p>
-        </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <details class="card-details">
+          <summary>Learn More</summary>
+          <div class="card-content">
+            <p>
+              SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account for the necessary leak detection sensors and equipment.
+            </p>
+            <p>
+              Also implemented on the robot is a multimodal deep feature fusion with a deep forest ensemble learning model to improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time detection applications.
+            </p>
+          </div>
+        </details>
       </div>
       <div class="card">
-        <h3>AI for Trauma Surgery</h3>
+        <h3>AI Copilot for Trauma Surgery</h3>
         <div class="media-gallery" aria-label="SPIRo media gallery">
           <img src="PurdueLab1.jpg" data-src="PurdueLab1.jpg" alt="PurdueLab 1" class="media-thumb" />
           <img src="PurdueLab2.jpg" data-src="PurdueLab2.jpg" alt="PurdueLab 2" class="media-thumb" />
@@ -333,24 +362,28 @@
           <img src="PurdueACIVS2.jpg" data-src="PurdueACIVS2.jpg" alt="PurdueACIVS 2" class="media-thumb" />
           <img src="PurdueACIVS3.jpg" data-src="PurdueACIVS3.jpg" alt="PurdueACIVS 3" class="media-thumb" />
         </div>
-        <div class="card-content">
-          <p>
-            Developing an AI-guided medical system to support trauma procedures in
-            resource-limited environments.
-          </p>
-        </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <details class="card-details">
+          <summary>Learn More</summary>
+          <div class="card-content">
+            <p>
+              Developing an AI-guided medical system to support trauma procedures in
+              resource-limited environments.
+            </p>
+          </div>
+        </details>
         <span class="tag">Machine Learning</span>
       </div>
       <div class="card">
         <h3>Energy Inequality Analysis</h3>
-        <div class="card-content">
-          <p>
-            Used LLMs, satellite imagery, and permit data to uncover disparities in
-            energy efficiency across income levels.
-          </p>
-        </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <details class="card-details">
+          <summary>Learn More</summary>
+          <div class="card-content">
+            <p>
+              Used LLMs, satellite imagery, and permit data to uncover disparities in
+              energy efficiency across income levels.
+            </p>
+          </div>
+        </details>
         <span class="tag">Data + Policy</span>
       </div>
     </div>
@@ -367,7 +400,7 @@
             infrastructure is limited.
           </p>
         </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <button class="show-more" aria-expanded="false">Learn More</button>
         <span class="tag" style="background: rgba(34,197,94,0.15); color: var(--accent-2);">Startup</span>
       </div>
       <div class="card">
@@ -378,7 +411,7 @@
             rapid iteration and testing.
           </p>
         </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <button class="show-more" aria-expanded="false">Learn more</button>
         <span class="tag">Innovation</span>
       </div>
     </div>
@@ -395,7 +428,7 @@
             to unhoused individuals for their work.
           </p>
         </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <button class="show-more" aria-expanded="false">Learn More</button>
         <span class="tag">Social Impact</span>
       </div>
       <div class="card">
@@ -406,7 +439,7 @@
             through workshops and community programs.
           </p>
         </div>
-        <button class="show-more" aria-expanded="false">Show more</button>
+        <button class="show-more" aria-expanded="false">Learn More</button>
         <span class="tag">Education</span>
       </div>
     </div>
@@ -506,7 +539,7 @@
           const wrapper = btn.previousElementSibling;
           if(!wrapper || !wrapper.classList.contains('card-content')) return;
           const expanded = wrapper.classList.toggle('expanded');
-          btn.textContent = expanded ? 'Show less' : 'Show more';
+          btn.textContent = expanded ? 'Show less' : 'Learn More';
           btn.setAttribute('aria-expanded', expanded);
         });
       });
