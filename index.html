@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #0f172a;
+      --bg: #ffffff;
       --card: #111827;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
+      --text: #0f172a;
+      --muted: #6b7280;
       --accent: #38bdf8;
       --accent-2: #22c55e;
     }
@@ -25,7 +25,7 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #020617, var(--bg));
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
@@ -68,7 +68,7 @@
     }
 
     nav a {
-      color: #ffffff;
+      color: var(--text);
       text-decoration: none;
       font-weight: 800;
       font-size: 1.25rem;
@@ -276,6 +276,14 @@
       </div>
       <div class="card">
         <h3>AI for Trauma Surgery</h3>
+        <div class="media-gallery" aria-label="SPIRo media gallery">
+          <img src="PurdueLab1.jpg" data-src="PurdueLab1" alt="PurdueLab 1" class="media-thumb" />
+          <img src="PurdueLab2.jpg" data-src="PurdueLab2" alt="PurdueLab 2" class="media-thumb" />
+          <img src="PurdueLab3.jpg" data-src="PurdueLab3" alt="PurdueLab 3" class="media-thumb" />
+          <img src="PurdueACIVS1.jpg" data-src="PurdueACIVS1.jpg" alt="PurdueACIVS 1" class="media-thumb" />
+          <img src="PurdueACIVS2.jpg" data-src="PurdueACIVS2.jpg" alt="PurdueACIVS 2" class="media-thumb" />
+          <img src="PurdueACIVS3.jpg" data-src="PurdueACIVS3.jpg" alt="PurdueACIVS 3" class="media-thumb" />
+        </div>
         <p>
           Developing an AI-guided medical system to support trauma procedures in
           resource-limited environments.
