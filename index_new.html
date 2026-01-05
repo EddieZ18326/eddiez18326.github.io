@@ -693,9 +693,9 @@
           <a href="#" class="dropbtn" onclick="showPage('research'); return false;">Research</a>
           <div class="dropdown-content">
             <a href="#" onclick="showPage('research'); document.getElementById('SPIRo').scrollIntoView({behavior:'smooth'}); return false;">SPIRo</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('HASEL').scrollIntoView({behavior:'smooth'}); return false;">HASEL Actuators</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('AmphibiousTurtle').scrollIntoView({behavior:'smooth'}); return false;">Amphibious Robotic Turtle</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('Microscope').scrollIntoView({behavior:'smooth'}); return false;">Microscopes</a>
+            <a href="#" onclick="showPage('research'); document.getElementById('AICopilot').scrollIntoView({behavior:'smooth'}); return false;">AI Copilot</a>
+            <a href="#" onclick="showPage('research'); document.getElementById('AlgalBlooms').scrollIntoView({behavior:'smooth'}); return false;">Algal Blooms</a>
+            <a href="#" onclick="showPage('research'); document.getElementById('PlanetaryPluse').scrollIntoView({behavior:'smooth'}); return false;">Planetary Pulse</a>
           </div>
         </div>
         <div class="dropdown">
@@ -707,16 +707,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Leadership in STEM & Debate</a>
-          <div class="dropdown-content">
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('Rocketry').scrollIntoView({behavior:'smooth'}); return false;">Model Rocketry and RC Aircraft</a>
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('VarsityDebateTeamCaptainCoach').scrollIntoView({behavior:'smooth'}); return false;">Debate</a>
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('HarvardVentures').scrollIntoView({behavior:'smooth'}); return false;">Harvard Ventures Tech Program</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('community'); return false;">Community Service</a>
+          <a href="#" class="dropbtn" onclick="showPage('community'); return false;">Leadership in Community</a>
           <div class="dropdown-content">
             <a href="#" onclick="showPage('community'); document.getElementById('STEMWorkshops').scrollIntoView({behavior:'smooth'}); return false;">STEM Workshops</a>
             <a href="#" onclick="showPage('community'); document.getElementById('FTC_Coaching').scrollIntoView({behavior:'smooth'}); return false;">FTC Robotics Coaching</a>
@@ -724,6 +715,15 @@
             <a href="#" onclick="showPage('community'); document.getElementById('TennisCoaching').scrollIntoView({behavior:'smooth'}); return false;">Tennis Coaching</a>
             <a href="#" onclick="showPage('community'); document.getElementById('Hiller').scrollIntoView({behavior:'smooth'}); return false;">Hiller Aviation Museum Volunteer</a>
             <a href="#" onclick="showPage('community'); document.getElementById('Enable').scrollIntoView({behavior:'smooth'}); return false;">Enabling the Future</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activites</a>
+          <div class="dropdown-content">
+            <a href="#" onclick="showPage('stem-projects'); document.getElementById('Rocketry').scrollIntoView({behavior:'smooth'}); return false;">Model Rocketry and RC Aircraft</a>
+            <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
+            <a href="#" onclick="showPage('stem-projects'); document.getElementById('VarsityDebateTeamCaptainCoach').scrollIntoView({behavior:'smooth'}); return false;">Debate</a>
+            <a href="#" onclick="showPage('stem-projects'); document.getElementById('HarvardVentures').scrollIntoView({behavior:'smooth'}); return false;">Harvard Ventures Tech Program</a>
           </div>
         </div>
         <!-- <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> -->
@@ -737,9 +737,8 @@
       <div class="about-container">
         <img src="EddieProfilePhoto.jpg" alt="Eddie Zhang" class="about-photo">
         <p>
-          Hi! I'm Eddie, a high school senior passionate about all things mechanical engineering and entrepreneurship. 
-          I'm a maker and tinkerer at heart, and I love working on solutions for pressing issues, from medical challenges to environmental protection. 
-          Most likely, I was born with a roll of duct tape in my hands. Thank you for stopping by!
+          Hi! I'm Eddie, a high school senior passionate about I am a passionate AI researcher
+          focusing on computer vision and robot perception. Thank you for stopping by!
         </p>
       </div>
     </div>
@@ -748,11 +747,13 @@
   <section id="research">
     <!-- ... projects content unchanged ... -->
     <h2>Research Projects</h2>
+    <!--
     <p style="text-align:center; font-size:1.3rem; margin-bottom:1rem;">
       <a href="https://youtu.be/T7zwqyhp-2E" target="_blank" rel="noopener noreferrer" style="color:#cf9e15; font-weight:600;">
         Click to Watch an Introduction to My Projects
       </a>
     </p>
+    -->
     <div class="project" id="SPIRo">
       <h3>SPIRo (Soft Pipe Inspection Robot)</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
@@ -769,10 +770,6 @@
               <p class="media-caption">SPIRo crawling demonstration video. <a href="https://www.youtube.com/watch?v=Btl4Zmm5sTo" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
             </div>
             <div class="media-wrapper">
-              <img src="Workshop2.png" alt="SPIRo main" class="media-item active" />
-              <p class="media-caption">Dining Room Lab</p>
-            </div>
-            <div class="media-wrapper">
               <img src="Progression.png" alt="SPIRo second" class="media-item" />
               <p class="media-caption">SPIRo Progression</p>
             </div>
@@ -780,8 +777,16 @@
               <img src="SPIRoMain.jpg" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">SPIRo crawling on a horizontal pipe</p>
             </div>
+            <div class="media-wrapper">
+            <img src="SPIRoCircuit.jpg" alt="SPIRo circuit" class="media-item active" />
+            <p class="media-caption">SPIRo control circuit</p>
+          </div>
           </div>
           <div class="media-row">
+            <div class="media-wrapper">
+              <img src="SPIRoMETEC1.jpg" alt="SPIRo main" class="media-item active" />
+              <p class="media-caption">Getting SPIRo sensors calibrated before testing</p>
+            </div>
             <div class="media-wrapper">
               <img src="METEC 6.png" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">Working with METEC Staff</p>
@@ -791,20 +796,16 @@
               <p class="media-caption">SPIRo in field testing at METEC</p>
             </div>
             <div class="media-wrapper">
-              <img src="METEC4.png" alt="SPIRo main" class="media-item active" />
+              <img src="SPIRoMETECEddie.jpg" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">Testing at METEC</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="METEC1.png" alt="SPIRo main" class="media-item active" />
-              <p class="media-caption">Preparations before a trial</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="HomeLab.png" alt="SPIRo main" class="media-item active" />
-              <p class="media-caption">At-Home Testing of SPIRo</p>
             </div>
             <div class="media-wrapper">
               <img src="METEC3.png" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">SPIRo at METEC</p>
+            </div>
+            <div class="media-wrapper">
+              <img src="HomeLab.png" alt="SPIRo main" class="media-item active" />
+              <p class="media-caption">At-Home Testing of SPIRo</p>
             </div>
           </div>
           <div class="media-row">
@@ -813,21 +814,22 @@
               <p class="media-caption">SPIRo Research Poster (<a href="Poster.pdf" target="_blank">View Enlarged PDF</a>)</p>
             </div>
             <div class="media-wrapper">
-              <img src="Robosoft 2.png" alt="SPIRo animation" class="media-item" />
-              <p class="media-caption">Long Form Presentation at Robosoft '25</p>
-            </div>
-            <div class="media-wrapper">
               <img src="Patent.png" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">Patent, To-Be Published Jan. 2026</p>
+            </div>
+            <div class="media-wrapper">
+              <img src="SPIRoJSHS02.jpg" alt="SPIRo JSHS 2" class="media-item active" />
+              <p class="media-caption">Oral Presentation at JSHS</p>
+            </div>
+            <div class="media-wrapper">
+              <img src="SPIRoJSHSN.jpg" alt="SPIRo JSHS 1" class="media-item" />
+              <p class="media-caption">SPIRo at JSHS National</p>
             </div>
             <div class="media-wrapper">
               <img src="Robosoft 1.png" alt="SPIRo animation" class="media-item" />
               <p class="media-caption">Presentation at Robosoft '25</p>
             </div>
-            <div class="media-wrapper">
-              <img src="JSHS 1.png" alt="SPIRo main" class="media-item active" />
-              <p class="media-caption">Oral Presentation at NJSHS</p>
-            </div>
+
             <div class="media-wrapper">
               <img src="SPIRo Conrad 1.jpg" alt="SPIRo main" class="media-item" />
               <p class="media-caption">SPIRo at Conrad Challenge event.</p>
@@ -896,12 +898,28 @@
           <li><strong><a href="https://jshs.org/wp-content/uploads/2024/05/62nd-NJSHS-Abstract-Book.pdf" target="_blank" rel="noopener noreferrer">JSHS Northern California</a></strong> – 2nd Place, $1500 (2024)</li>
           <li><strong>Synopsys Science Fair (2024)</strong> – 2nd Award, Physical Sciences (2024)</li>
           <li><strong>Synopsys Science Fair (2024)</strong> – IEEE Special Award (2024)</li>
-
         </ul>
         <h4>Publications</h4>
         <ul>
           <li>
+            <strong>E. Zhang</strong> and E. Zhang (2025) 
+            "<a href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2025.1569621/full" target="_blank" rel="noopener noreferrer">
+              Gas pipeline leakage detection based on multiple multimodal deep feature selections and optimized deep forest classifier
+            </a>." 
+            Frontiers in Environmental Science, 13:1569621. 
+            doi: <a href="https://doi.org/10.3389/fenvs.2025.1569621" target="_blank" rel="noopener noreferrer">10.3389/fenvs.2025.1569621</a>.
+          </li>
+          <li>
             <strong>E. Zhang</strong> and E. Zhang, 
+            "<a href="https://ieeexplore.ieee.org/abstract/document/10585716" target="_blank" rel="noopener noreferrer">
+              Development of A Multimodal Deep Feature Fusion with Ensemble Learning Architecture for Real-Time Gas Leak Detection
+            </a>," 
+            2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI), Mt Pleasant, MI, USA, 2024, pp. 1-6, 
+            doi: <a href="https://doi.org/10.1109/ICMI60790.2024.10585716" target="_blank" rel="noopener noreferrer">10.1109/ICMI60790.2024.10585716</a>.
+            (<a href="https://docs.google.com/presentation/d/1_KfaM6-ugVSldSBNru1gA3N591IqWTrmo03MowQ4adg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a>), (Won Best Paper Award)
+          </li>
+          <li>
+            E. Zhang and <strong>E. Zhang</strong>, 
             "<a href="https://ieeexplore.ieee.org/abstract/document/11020922" target="_blank" rel="noopener noreferrer">
               Omnimobile and Load Capable Pneumatic Soft Robot for Gas Distribution Pipeline Inspection
             </a>," 
@@ -911,7 +929,7 @@
             <a href="https://youtu.be/hdthXFKD-o8" target="_blank" rel="noopener noreferrer">Full-form 8-minute Talk</a>)
           </li>
           <li>
-            <strong>E. Zhang</strong> and E. Zhang, 
+            E. Zhang and <strong>E. Zhang</strong>, 
             "<a href="https://ieeexplore.ieee.org/abstract/document/10587655" target="_blank" rel="noopener noreferrer">
               SPIRo: An AI Based Origami Inspired Soft Robot with Multidimensional Locomotion and Multimodal Data Analysis for Infrastructure Assessments
             </a>," 
@@ -919,329 +937,191 @@
             doi: <a href="https://doi.org/10.1109/CCDC62350.2024.10587655" target="_blank" rel="noopener noreferrer">10.1109/CCDC62350.2024.10587655</a>.
             (<a href="https://docs.google.com/presentation/d/1cLq0BMWZ9x4hjpzt3K-KKAxXx3ZzsX22-PQVRJxfpGc/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a>)
           </li>
-          <li>
-            E. Zhang and <strong>E. Zhang</strong>, 
-            "<a href="https://ieeexplore.ieee.org/abstract/document/10585716" target="_blank" rel="noopener noreferrer">
-              Development of A Multimodal Deep Feature Fusion with Ensemble Learning Architecture for Real-Time Gas Leak Detection
-            </a>," 
-            2024 IEEE 3rd International Conference on Computing and Machine Intelligence (ICMI), Mt Pleasant, MI, USA, 2024, pp. 1-6, 
-            doi: <a href="https://doi.org/10.1109/ICMI60790.2024.10585716" target="_blank" rel="noopener noreferrer">10.1109/ICMI60790.2024.10585716</a>.
-            (<a href="https://docs.google.com/presentation/d/1_KfaM6-ugVSldSBNru1gA3N591IqWTrmo03MowQ4adg/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a>), (Won Best Paper Award)
-          </li>
-          <li>
-            E. Zhang and <strong>E. Zhang</strong> (2025) 
-            "<a href="https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2025.1569621/full" target="_blank" rel="noopener noreferrer">
-              Gas pipeline leakage detection based on multiple multimodal deep feature selections and optimized deep forest classifier
-            </a>." 
-            Frontiers in Environmental Science, 13:1569621. 
-            doi: <a href="https://doi.org/10.3389/fenvs.2025.1569621" target="_blank" rel="noopener noreferrer">10.3389/fenvs.2025.1569621</a>.
-          </li>
           <li>Provisional Patent Granted, Full Patent to be published in January, 2026.</li>
         </ul>
       </div>
     </div>
    
     <!-- Pulsar Robotics project moved to Entrepreneurship page -->
-    <div class="project" id="HASEL">
-      <h3>HASEL Actuators</h3>
+    <div class="project" id="AICopilot">
+      <h3>AI Copilot for Trauma Surgery</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
       <div class="media-gallery">
         <!-- <button class="gallery-btn prev-btn" onclick="changeMedia(this, -1)">&#10094;</button> -->
         <div class="media-container">
           <div class="media-row">
             <div class="media-wrapper">
-              <img src="HASEL Sized.png" alt="HASEL Sized" class="media-item active" />
-              <p class="media-caption">Size comparison of HASEL actuator.</p>
+              <img src="PurdueLab1.jpg" alt="Manikin" class="media-item active" />
+              <p class="media-caption">Manikin.</p>
             </div>
             <div class="media-wrapper">
-              <img src="HASELMain.png" alt="HASEL main" class="media-item" />
-              <p class="media-caption">Main HASEL actuator prototype.</p>
+              <img src="PurdueLab2.jpg" alt="ABB Robot" class="media-item" />
+              <p class="media-caption">ABB Robot.</p>
             </div>
             <div class="media-wrapper">
-              <img src="HASEL1.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">3D-Printed Layers</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="HASEL2.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Load-Bearing Experiments</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="Purdue1.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Lab Work at Purdue</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="Purdue4.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">3D Printing Actuators</p>
+              <img src="PurdueLab3.jpg" alt="Working on ABB Robot" class="media-item" />
+              <p class="media-caption">Working on ABB Robot</p>
             </div>
           </div>
           <div class="media-row">
+            <!--
             <div class="media-wrapper">
               <video src="HASELDemo.mov" controls class="media-item"></video>
               <p class="media-caption">HASEL actuator demonstration video. <a href="https://youtu.be/QlLlkvTnBO4" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
             </div>
+            -->
             <div class="media-wrapper">
-              <img src="HASEL5.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Sensor-Integrated Design</p>
+              <img src="PurdueACIVS1.jpg" alt="ACIVS Presentation" class="media-item" />
+              <p class="media-caption">Presentation at ACIVS 2025 in Tokyo</p>
             </div>
             <div class="media-wrapper">
-              <img src="Purdue3.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Preparing Polymers</p>
+              <img src="PurdueACIVS2.jpg" alt="With Prof" class="media-item" />
+              <p class="media-caption">With Professor</p>
             </div>
             <div class="media-wrapper">
-              <img src="HASELSystem.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">HASEL system setup.</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="icmsr.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Best Presentation Award, ICMSR '25</p>
+              <img src="PurdueACIVS3.jpg" alt="ACIVS" class="media-item" />
+              <p class="media-caption">ACIVS Discussions</p>
             </div>
           </div>
-          <div class="media-row">
-            <div class="media-wrapper">
-              <img src="ISEFPoster.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">ISEF Poster (<a href="ISEFPoster.pdf" target="_blank">View Enlarged PDF</a>)</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="ISEF251.JPEG" alt="HASEL main" class="media-item" />
-              <p class="media-caption">Grand Award @ ISEF '25</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="ISEF2.png" alt="HASEL main" class="media-item" />
-              <p class="media-caption">ISEF Awards Ceremony</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="HASEL3.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Deformation Experiments</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="HASEL4.png" alt="HASEL second" class="media-item" />
-              <p class="media-caption">Sensor Coupling Experiments</p>
-            </div>
-            
           </div>
         </div>
         <!-- <button class="gallery-btn next-btn" onclick="changeMedia(this, 1)">&#10095;</button> -->
       </div>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
-      <p class="tagline" style="text-align:center; white-space: nowrap;">Hydraulically Amplified Self-Healing Electrostatic Actuators for Personalized Medical Care</p>
+      <p class="tagline" style="text-align:center; white-space: nowrap;">AI Copilot for Trauma Surgery</p>
       <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
       <div class="project-details" style="display: block;">
-        <p>Cardiovascular diseases are the leading cause of death globally, claiming 17.9 million lives each year. 
-          Heart failure, one of the most serious variations of cardiovascular disease, is a chronic condition in 
-          which the heart is unable to pump enough blood to support the body’s needs. While simple lifestyle changes 
-          and medication can treat HF in its early stages, more serious cases, called class III or IV, often require 
-          more intensive treatment. For these scenarios, a heart transplant is the ideal treatment. However, the 
-          demand for donor hearts far exceeds their supply, leaving many individuals without access to it. Additionally, 
-          many individuals are deemed unfit for this process due to reasons such as age or other health conditions. 
-          These challenges underscore the urgent need for alternative solutions to address the growing issue of heart 
-          failure. </p>
-        <p>Soft robotics has emerged as a promising solution for the limitations of VADs. Unlike rigid robots, 
-          soft robots are composed of flexible, deformable materials that enable them to operate in complex, 
-          delicate, and unpredictable environments.I propose a cardiac assist system that integrates HASEL actuators 
-          with AI-based control to address the challenges of heart failure. The system demonstrates versatility, 
-          combining the flexible and safe characteristics of soft robotics with AI to advance VADs. The implementation 
-          of HASEL actuators with self-healing capabilities allows for increased reliability and performance. Using 
-          multi-material 3D printing ensures precise and reproducible geometries, which improves performance. The 
-          integration of machine learning for control allows the system to effectively address the nonlinear 
-          characteristics of HASEL actuators. Our algorithm achieves a R2 value of 0.91 in predicting stress. 
-          The device also achieves a maximum strain of 32.9% and a maximum energy output of 5.49 N•mm, exceeding 
-          requirements for cardiac assist applications. This work impacts medical care more broadly by making it 
-          more personal. with the use of DIW 3D printing and soft materials. </p>
-
-        <p>I am now founding a second start-up, Pulsar Robotics.</p>
-
+        <p>Access to life-saving humanitarian medicine in austere and resource-constrained 
+          environments is crucial to ensuring the health and safety of many around the world. 
+          However, access to high-quality medical care in these conditions is challenging due to 
+          the absence of connectivity and power, limited equipment, and the lack of available 
+          medical expertise. To address these constraints, we propose a memory-augmented 
+          Vision-Language Model (VLM) for action recognition and action anticipation to assist 
+          in medical decision-making and provide real-time intraoperative guidance to 
+          first responders and medical professionals performing life-saving interventions. </p>
+        <p>More to come ...</p>
         <h4>Recognition</h4>
         <ul>
-          <li>International Science and Engineering Fair (<a href="https://isef.net/project/enbm042-ai-driven-hasel-actuators-for-cardiac-assist" target="_blank" rel="noopener noreferrer">ISEF</a>) - 4th Place Grand Award in Biomedical Engineering (2025)</li>
-          <li>California Science and Engineering Fair (<a href="https://csef.usc.edu/Current/Awards/CategoryAwards2025.pdf" target="_blank" rel="noopener noreferrer">CSEF</a>) - 5th Place Award in Applied Mechanics and Structures (2025)</li>
-          <li>Synopsys Science and Technology Championship - <a href="https://science-fair.org/2025-winner-summary/" target="_blank" rel="noopener noreferrer">Grand Award</a>, Best of Championship in Physical Sciences (2025)</li>
-          <li>Junior Science and Hummanities Symposium (<a href="https://cob.sfsu.edu/initiatives-centers/jshs" target="_blank" rel="noopener noreferrer">JSHS</a>) - 2nd place, Chemistry (2025)</li>
-          <li>ASEI Award Honorable Mention (<a href="https://www.science-fair.org/database/project_awards.php?school_year=2425&all&special_order&_gl=1*lt1l14*_ga*MTA3OTMyODg3MC4xNzU1MDM0NzQw*_ga_ECJM45NJHR*czE3NTU2NTM4ODckbzMkZzEkdDE3NTU2NTQwNDAkajQ5JGwwJGgw" target="_blank" rel="noopener noreferrer">2025</a>)</li>
-          <li>Kindeva Innovator Award - $250 prize (<a href="https://csef.usc.edu/Current/Awards/SponsoredAwards2025.pdf" target="_blank" rel="noopener noreferrer">2025</a>)</li>
-          <li>Best Presentation Award - 2025 11th International Conference on Mechatronics Systems and Robots (ICMSR 2025)</li>
+          <li>Synopsys Science and Technology Championship - <a href="https://www.science-fair.org/database/project_awards.php?school_year=2425&all&special_order&_gl=1*1uqobqg*_ga*MTY3NzM5MjIxMS4xNzY3NTk5NDUw*_ga_ECJM45NJHR*czE3Njc1OTk0NDkkbzEkZzEkdDE3Njc1OTk1MjAkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">2nd Place</a> in Physical Sciences (2025)</li>
         </ul>
-        <h4>Recognition</h4>
+        <h4>Publications</h4>
         <ul>
-          <li><strong>E. Zhang</strong> and A. Chortos, “3D-Printed HASEL Actuators With Integrated Fluidic Piezoresistive Pressure Sensor for Cardiac Assist Applications,” 2025 11th International Conference on Mechatronics Systems and Robots, Singapore, 2025 (In Press)</li>
-          <li>Z. Ma, ... <strong>E. Zhang</strong>, ... A. Chortos, "Thermally Elongated Thermoplastic Nozzles Unlock Micro-Scale Direct Ink Writing," Advanced Materials Technologies, 2025 (In Press)</li>
+          <li>Y. Zhuo, <strong>E. Zhang</strong> et al, <a href="https://www.nature.com/articles/s41597-025-06365-y" target="_blank" rel="noopener noreferrer">An Egocentric Life-Saving Interventional Procedure Dataset of Actions, Medical Questions, Maneuvers and Tools</a> in Nature Scientific Data (IF 6.9), 2025.</li>
+          <li><strong>E. Zhang</strong>, Y. Zhuo, and J. Wachs, <a href="https://books.google.com/books?hl=en&lr=&id=yZqlEQAAQBAJ&oi=fnd&pg=PA199&ots=tRd80zvDUh&sig=z0ikBWkTwFgY5t75zPMCEeiQPwE#v=onepage&q&f=false" target="_blank" rel="noopener noreferrer">Context-aware Vision Language Model for Action Recognition</a> in Advanced Concepts for Intelligent Vision Systems, Aug 2025.</li>
+          <li>Y. Zhuo, <strong>E. Zhang</strong> et al, <a href="https://bmva-archive.org.uk/bmvc/2025/assets/papers/Paper_1135/paper.pdf" target="_blank" rel="noopener noreferrer">The Trauma THOMPSON Dataset for Real-World Emergency AI</a> in 36th British Machine Vision Conference, Nov 2025. (Oral presentation).</li>
+          <li>Y. Zhuo, <strong>E. Zhang</strong> et al, Trauma THOMPSON: A Dataset and Realistic Generative Framework for AI Copilots in Emergency Care. in 38th Conf on the Innovative Applications of Artificial Intelligence, 2025. In press.</li>
         </ul>
       </div>
     </div>
-    <div class="project" id="AmphibiousTurtle">
-      <h3>Amphibious Robotic Turtle</h3>
+    <div class="project" id="Algal blooms">
+      <h3>Algal blooms</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
       <div class="media-gallery">
         <!-- <button class="gallery-btn prev-btn" onclick="changeMedia(this, -1)">&#10094;</button> -->
         <div class="media-container">
           <div class="media-row">
             <div class="media-wrapper">
-              <img src="turtle1.png" alt="Turtle1" class="media-item active" />
-              <p class="media-caption">Robotic turtle on land.</p>
+              <img src="SSTP1.jpg" alt="Turtle1" class="media-item active" />
+              <p class="media-caption">Poster Presetation.</p>
             </div>
             <div class="media-wrapper">
-              <img src="turtle2.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Me and ART</p>
-            </div>
-            <div class="media-wrapper">
-              <video src="turtlecrop.mov" controls class="media-item"></video>
-              <p class="media-caption">Swimming demonstration video.<a href="https://youtu.be/t_zStXIYDOc" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto1.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Holding ART</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto2.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Robotic turtle in Lab.</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto3.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Lab Photo</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto7.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">At Mason Laboratory</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto5.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Preparing motor cases</p>
+              <img src="SSTP2.jpg" alt="turtle2" class="media-item" />
+              <p class="media-caption">With Professor</p>
             </div>
           </div>
 
           <div class="media-row">
             <div class="media-wrapper">
-              <img src="turtle3.png" alt="turtle3" class="media-item" />
-              <p class="media-caption">Turtle at Yale's Tank</p>
+              <img src="SSTP3.jpg" alt="SSTP3" class="media-item" />
+              <p class="media-caption">SSTP3</p>
             </div>
             <div class="media-wrapper">
-              <img src="leavingwtr.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">ART leaving the water with new design</p>
-            </div>
-            <div class="media-wrapper">
-              <video src="walking.mp4" controls class="media-item"></video>
-              <p class="media-caption">Walking demonstration video. <a href="https://youtu.be/SomtNcDqTo0" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
-            </div>
-            <div class="media-wrapper">
-              <video src="swimaway.mov" controls class="media-item"></video>
-              <p class="media-caption">Swimming demonstration video. <a href="https://youtu.be/N7G-ar8lnQE" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto4.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Preparing flippers</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="legmount.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">New flipper mounting system</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="labphoto6.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">ART with new flippers</p>
-            </div>
-          </div>
-
-          <div class="media-row">
-            <div class="media-wrapper">
-              <img src="magmotor.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Magnetically Driven Motors Prototype</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="legtransition.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Transformation between states</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="legset.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Set of flippers</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="proposal.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Proposed deep water design</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="waterproofasm.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Waterproofed Motor Assembly</p>
-            </div>
-            <div class="media-wrapper">
-              <img src="waterproofcase.png" alt="turtle2" class="media-item" />
-              <p class="media-caption">Encased high depth motor</p>
+              <img src="SSTP4.jpg" alt="SSTP4" class="media-item" />
+              <p class="media-caption">SSTP</p>
             </div>
           </div>
         </div>
         <!-- <button class="gallery-btn next-btn" onclick="changeMedia(this, 1)">&#10095;</button> -->
       </div>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
-      <p class="tagline" style="text-align:center;">Deep-Water Shape Morphing Amphibious Robotic Turtle at Yale's Faboratory</p>
+      <p class="tagline" style="text-align:center;">Algal Blooms research at SSTP</p>
       <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
       <div class="project-details" style="display: block;">
-        <p>Mobile robots are impactful for several different sectors, including search and rescue, environmental monitoring, and home service industry. Many mobile robots are designed to opperate in only one environment. As a result, their bodies are made up of dedicated mecahnisms for locomotion, such as paddles or wheels. 
-          Their behaviors are optimized only for that niche. Biological systems, however, exhibit phenoplasticity in their anatomical structure, stiffness, and overall behavior. This allows them to adapt and navigate multiple environments. </p>
-        <p>This shape-morphing amphibious robotic turtle is designed for locomtion across both terrestrial and aquatic environments. The limbs are inspired by those of sea turtles and land tortoises. They can transform between hydrodynamic flippers which are optimized for swimming and load-bearing legs that can allow for terrestrial mobility.
-          This is achieved through pressure-responsive laminar jamming. This enables rapid and efficient shape and stiffness change. 
-        </p>
-        <p>Finally, to achieve deep-water swimming capabilities, the motors and chasis are designed to withstand up to 30 PSI of pressure, equivalent to a depth 10 meters. Furthermore, bouyancy control pumps are integrated to allow the turtle to achive neutral 
-          buoyancy or vary it's buoyancy to reach depths or ascend.  </p>
-        <p>This project was conducted at Yale’s Faboratory, where I worked as a paid research assistant. I was invited to join the lab after presenting my work at RoboSoft 2025, which captured their interest.</p>
+        <p>Harmful algal blooms (HABs), driven by environmental pollution, pose significant threats to water quality, public health, 
+          and aquatic ecosystems. This study enhances the prediction of HABs in Lake Erie, part of the Great Lakes system, 
+          by utilizing ensemble machine learning (ML) models coupled with explainable artificial intelligence (XAI) for interpretability. 
+          Using water quality data from 2013 to 2020, various physical, chemical, and biological parameters were analyzed to predict 
+          chlorophyll-a (Chl-a) concentrations, which are a commonly used indicator of phytoplankton biomass and a proxy for algal blooms. 
+          This study employed multiple ensemble ML models, including random forest (RF), deep forest (DF), gradient boosting (GB), and 
+          XGBoost, and compared their performance against individual models, such as support vector machine (SVM), decision tree (DT), 
+          and multi-layer perceptron (MLP). The findings revealed that the ensemble models, particularly XGBoost and deep forest (DF), 
+          achieved superior predictive accuracy, with R2 values of 0.8517 and 0.8544, respectively. The application of SHapley Additive 
+          exPlanations (SHAPs) provided insights into the relative importance of the input features, identifying the particulate organic 
+          nitrogen (PON), particulate organic carbon (POC), and total phosphorus (TP) as the critical factors influencing the Chl-a 
+          concentrations. This research demonstrates the effectiveness of ensemble ML models for achieving high predictive accuracy, 
+          while the integration of XAI enhances model interpretability. The results support the development of proactive water quality 
+          management strategies and highlight the potential of advanced ML techniques for environmental monitoring.</p>
+        <h4>Recognition</h4>
+        <ul>
+          <li>GENIUS Olympiad Finalist (2025)</li>
+        </ul>
+        <h4>Publications</h4>
+        <ul>
+          <li>O. Mermer, E. Zhang, and I. Demir, <a href="https://www.mdpi.com/2504-2289/9/5/138"> Comparative Study of Ensemble Machine Learning and Explainable AI for Predicting Harmful Algal Blooms</a> in Big Data and Cognitive Computing (IF 4.4), 138, 2025.</li>
+        </ul>
       </div>
     </div>
 
-    <div class="project" id="Microscope">
-      <h3>Mechanical Design work at the Schnitzer Lab, Stanford University</h3>
+    <div class="project" id="PlanetaryPluse">
+      <h3>Planetary Pulse</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
       <div class="media-gallery">
         <!-- <button class="gallery-btn prev-btn" onclick="changeMedia(this, -1)">&#10094;</button> -->
         <div class="media-container">
           <div class="media-row">
             <div class="media-wrapper">
-              <img src="SideIllumination.jpeg" alt="Mount" class="media-item active" />
-              <p class="media-caption">Side illumination mount for microscope.</p>
+              <img src="PlanetaryPulse_Water Pollution vs_ Income Level.avif" alt="Water Quality vs Income" class="media-item active" />
+              <p class="media-caption">Water Quality vs Income</p>
             </div>
             <div class="media-wrapper">
-              <img src="BehavioralApparatus.JPG" alt="Apparatusn" class="media-item active" />
-              <p class="media-caption">Behavioral apparatus for mice.</p>
+              <img src="PlanetaryPulse_Green Illustrative 4 Ways to Create a Green Environment Poster.avif" alt="Air Pollution vs Cancer" class="media-item active" />
+              <p class="media-caption">Air Pollution vs Cancer</p>
             </div>
             <div class="media-wrapper">
-              <img src="Enclosure.jpeg" alt="enclosure" class="media-item active" />
-              <p class="media-caption">Microscope enclosure.</p>
+              <img src="PlanetaryPulse_Pollution Index vs_ Poverty Rate.avif" alt="Pollution Index vs Poverty Rate" class="media-item active" />
+              <p class="media-caption">Pollution Index vs Poverty Rate</p>
             </div>
             <div class="media-wrapper">
-              <img src="beha2.png" alt="enclosure" class="media-item active" />
-              <p class="media-caption">Behavioral apparatus for mice.</p>
+              <img src="PlanetaryPulse_Regulations_Voting.avif" alt="Regulations vs Voting" class="media-item active" />
+              <p class="media-caption">Regulations vs Voting</p>
             </div>
             <div class="media-wrapper">
-              <img src="beha3.png" alt="enclosure" class="media-item active" />
-              <p class="media-caption">Behavioral apparatus for mice.</p>
+              <img src="PlanetaryPulse_Air Quality In Relation to Voting.avif" alt="Air Quality vs Voting" class="media-item active" />
+              <p class="media-caption">Air Quality vs Voting</p>
             </div>
           </div> 
           <div class="media-row">
             <div class="media-wrapper">
-              <img src="KicadModel.png" alt="pcbmodel" class="media-item active" />
-              <p class="media-caption">3D model of rotary encoder PCB.</p>
+              <img src="PlanetaryPulse_zoning.avif" alt="Zoning" class="media-item active" />
+              <p class="media-caption">Zoning</p>
             </div>
             <div class="media-wrapper">
-              <img src="KicadSchematic.png" alt="pcbschematic" class="media-item active" />
-              <p class="media-caption">Schematic of rotary encoder PCB.</p>
+              <img src="PlanetaryPulse_China.avif" alt="China" class="media-item active" />
+              <p class="media-caption">China</p>
             </div>
-            <div class="media-wrapper">
-              <video src="rotaryencoder.mp4" controls class="media-item"></video>
-              <p class="media-caption">Rotary encoder working video. <a href="https://youtu.be/4YK4Z0ecns8" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
-            </div>
-            <div class="media-wrapper">
-              <img src="beha1.png" alt="enclosure" class="media-item active" />
-              <p class="media-caption">Behavioral apparatus circuitry.</p>
-            </div>
-
           </div>
         </div>
         <!-- <button class="gallery-btn next-btn" onclick="changeMedia(this, 1)">&#10095;</button> -->
       </div>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
-      <p class="tagline" style="text-align:center;">Collimator Mount, PCBs, and Enclosure for Crystal Skull Microscope</p>
+      <p class="tagline" style="text-align:center;">PlanetaryPulse.net</p>
       <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
       <div class="project-details" style="display: block;">
-        <p>The Schnitzer Group at Stanford University works at the intersection of neuroscience, physics, engineering, and artificial intelligence to develop and apply advanced optical, robotic, and computational techniques for elucidating neural dynamics and information processing in behaving animals.
-           </p>
-        <p>My work centers around designing and fabricating behavioral apparatus used in experiments. I have developed various components for microscopes, from a full 1P microscope to an enclosure and side illumination method. I have also built behavioral apparatus for mice, including training wheels and experimental rigs to stimulate mouse behavior. I designed a PCB for rotary encoders used to track the movement of mice, and standarized commonly used hardware parts including this PCB, as well as behavioral rig and camera mount designs.</p>
-        <p>My role requires high levels of collaboration with the lab's biologists, as I work to develop and build behavioral rigs perfectly fit for their needs and requirements.</p>
-        
+        <p>Planetary Pulse investigates the intersection between social justice and environmental pollution to improve the well-being of 
+          humans across the world. We raise awareness and deepen understanding about the environmental health and social equality through 
+          increasing the accessibility of environmental justice data and information. We highlight and foster awareness about the impact of 
+          pollution on vulnerable communities and to advocate for a just and sustainable future.
+        </p>
       </div>
     </div>
 
