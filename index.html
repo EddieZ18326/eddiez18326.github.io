@@ -732,7 +732,7 @@
       <div class="about-container">
         <img src="EddieProfilePhoto.jpg" alt="Eddie Zhang" class="about-photo">
         <p>
-          Hi! I'm Eddie, a high school senior passionate about I am a passionate AI researcher
+          Hi! I'm Eddie, a high school senior and a passionate AI researcher
           focusing on computer vision and robot perception. Thank you for stopping by!
         </p>
       </div>
@@ -779,6 +779,10 @@
           </div>
           <div class="media-row">
             <div class="media-wrapper">
+              <img src="SPIRo Conrad 1.jpg" alt="SPIRo main" class="media-item active" />
+              <p class="media-caption">SPIRo at Conrad Challenge event.</p>
+            </div>
+            <div class="media-wrapper">
               <img src="SPIRoMETEC1.jpg" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">Getting SPIRo sensors calibrated before testing</p>
             </div>
@@ -817,8 +821,8 @@
               <p class="media-caption">Oral Presentation at JSHS</p>
             </div>
             <div class="media-wrapper">
-              <img src="SPIRoJSHSN.jpg" alt="SPIRo JSHS 1" class="media-item" />
-              <p class="media-caption">SPIRo at JSHS National</p>
+              <img src="SPIRoArch1.png" alt="SPIRo JSHS 1" class="media-item" />
+              <p class="media-caption">SPIRo Gas Leak Detection ML Model</p>
             </div>
             <div class="media-wrapper">
               <img src="Robosoft 1.png" alt="SPIRo animation" class="media-item" />
@@ -841,42 +845,51 @@
       <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
       <div class="project-details" style="display: block;">
 
-        <p>In the winter of 2019, a thunderous bang shook my family’s hotel room in Lake Tahoe. Lights flickered out, and a crowd rushed along the street. 
-          A gas pipeline had exploded. It caused only minor injuries, fortunately. But with more explosions in the news, including fatal ones near my grandparents’ home, 
-          I started digging into the data. I was stunned: major incidents were occurring every 40 hours, releasing millions of tons of methane. 
-          The issue wasn’t a lack of awareness. It was, instead, weaknesses in existing technologies: slow and expensive, with systems incapable of detecting small 
-          leaks before they became catastrophic.</p>
-        <p>Current industrial methods for gas leak detection, including hydrostatic testing and camera inspection, 
-          fall short of meeting today’s needs. Pipeline leaks are both frequent and dangerous; in the U.S. alone, a significant leak occurs every 
-          40 hours, with smaller fugitive leaks often going undetected and unreported, leading to millions of tons of methane emissions. Inspection approaches are often 
-          inaccurate, expensive, and labor-intensive, requiring extensive human involvement. Consequently, many leaks remain 
-          unnoticed for extended periods of time, all the while causing severe damage to both the environment and populations. 
-          These leaks endanger nearby populations, cause millions of dollars in losses, and contribute to the release of 
-          nearly seven million tons of methane into the atmosphere each year. Methane is uniquely concerning because it is 
-          30 times more potent than carbon dioxide in terms of global warming potential, and it alone accounts for one-third 
-          of the world’s warming from greenhouse emissions. Therefore, early detection of gas infrastructure leaks has become 
-          an urgent and efficient way to reduce harmful emissions.</p>
-        <p>SPIRo (Soft Pipe Inspection Robot) is a pneumatically actuated soft pipe inspection robot for the accurate 
-          inspection of gas pipes in difficult-to-reach environments. It uses a compliant scissor linkage, McKibben artificial 
-          muscle actuators, and magnetic grippers. It achieves a speed of 15 mm/s when crawling on a horizontal surface and 9 mm/s 
-          when climbing up a vertical surface. It can also deform its body 60 degrees vertically and 40 degrees horizontally to 
-          clear obstacles. The robot’s origami-inspired grippers support a total weight of 417 grams of extra payload to account 
-          for the necessary leak detection sensors and equipment.
-        </p>
-        <p>Also implemented on the robot is a  multimodal deep feature fusion with a deep forest ensemble learning model to 
-          improve SPIRo’s gas leak detection accuracy and redundancy. The model consists of the convolutional layers of three 
-          CNNs, the AlexNet, ResNet-50, and MobileNet, and a deep forest ensemble model with all three CNNs. Not only is the 
-          ensemble model more accurate, but it is also more reliable due to increased redundancy in analyzing both thermal 
-          images and gas sensor data. In addition, the proposed method is also memory efficient, making it suitable for real-time 
-          detection applications.
-
-        </p>
-        <p>I reached out to dozens of labs and professionals across the country to seek out advice for improving the robot 
-          to make it more suitable for field use. After several rounds of questioning and intervies, I was awarded an opportunity 
-          to conduct real-field testing at the Methane Emissions Technology Evaluation Center (METEC), thoroughly evaluating SPIRo’s real-world capabilities and achieving an 
-          accuracy of 95% throughout these tests. I am eternally grateful for METEC's generosity, who seeing as we were highschoolers, were able to waive the costs traditionally associated with testing on their site. 
-          I also worked with the MIT Media Lab to implement FlowIO, a standalone air compressor system on the robot and the Southwest Research Institute for calibrating the robot in tests at home. 
-        </p>
+        <p>SPIRo, short for soft pipe inspection robot, was born from my personal experience with 
+          a gas leak explosion. Further investigating the dangers of faulty gas pipelines online, 
+          I discovered, in the US, half a million undetected leaks release 7.1 million tons of 
+          methane annually. However, existing leak detection methods remain costly, inefficient, 
+          and difficult to deploy at scale due to the harsh environments pipelines are found in. 
+          Together with my brother Evan, I developed SPIRo, using emerging soft robot technology, 
+          allowing it to adaptively navigate pipelines while using its sensors and an ML framework to 
+          scan for leaks.</p>
+        <p>SPIRo is fully 3D printed, and we custom-designed the robot from scratch in CAD, 
+          from its magnetic grippers to its flexible scissor linkage. To enable faster movement, 
+          SPIRo is equipped with McKibben artificial muscles that pneumatically inflate and deflate to 
+          push the robot’s scissor linkage. It follows an inch-worm inspired movement. 
+          SPIRo’s magnetic feet also alternate adhering and lifting away from the pipe, 
+          allowing the expanded scissor linkage to shift forward. A similar thing happens for 
+          vertical locomotion. </p>
+        <p>I developed a custom circuit using MOSFETs that regulates the opening and closing of 
+          the pneumatic valves that control the flow of air to and from each of SPIRo’s actuators, 
+          modeling its movement. The first iteration of SPIRo was equipped with two gas composition 
+          sensors for methane and carbon monoxide, where the data was processed by a simple artificial 
+          neural network to determine the presence of a leak. However, during outside at-home tests, 
+          I discovered that wind would blow the gas plume away from the sensors, leading to false 
+          negatives. Thus, I equipped SPIRo with a thermal camera as well, allowing it to “see” the 
+          rising gas plumes. These thermal images were processed with CNNs, while the gas sensors were 
+          processed with ANNs, before their predictions were finally fused. </p>
+        <p>After at home tests, I conducted rigorous real-field testing at the Methane Emissions 
+          Technology Evaluation Center collecting over 20,000 data points. One shortcoming that 
+          I noticed from these field tests was that the ML architecture I currently had implemented 
+          was too large and inefficient. Thus, using these learnings, I sought to develop a new, 
+          more efficient architecture through reducing model size. That led me to looking deeper into 
+          the CNNs that I was currently using. Since CNNs are pre-trained and developed on larger 
+          datasets such as ImageNet, I was curious to see if these full architectures were actually 
+          the best for detecting gas leaks from thermal images, or if only using a subsection of the 
+          layers was sufficient, which would save computation time. In fact, removing layers would help 
+          to prevent overfitting and improve accuracy too! I dissected each of the CNNs that I 
+          was using and analyzed the features extracted by each layer. I was fascinated by how different 
+          CNNs and their inner layers reacted to an infrared image of a gas leak, with some placing 
+          more emphasis on the color contrasts between the warmer (leak) regions and the cooler 
+          (no leak) regions, while others highlighted the boundary between the two regions. 
+          I decided to take a diverse set of the represented features from different CNNs to improve 
+          robustness, and this new architecture achieved an accuracy of 95% on field data.  
+          It is also one of the highlights of my journal paper!</p>
+        <p>SPIRo has gained the attention of entrepreneurs through winning the Conrad Challenge, 
+          and we are currently expanding our startup Enviro-AI to distribute SPIRo around the world, 
+          reaching out to venture capitalists from MIT, Equinor, and the 1517 Fund. I hope SPIRo 
+          will be on every pipeline around the world in the coming years. </p>
 
         <p>I have co-founded a start-up, Enviro-AI, to bring this product to market. 
         </p>
@@ -891,8 +904,8 @@
           <li><strong>Medici Grant</strong> – $1000 from 1517 Fund (2025)</li>
           <li><strong><a href="https://www.sigmaxi.org/news/article/2025/04/15/winners-announced-for-2025-sigma-xi-student-research-showcase" target="_blank" rel="noopener noreferrer">Sigma Xi Honorific Research Society</a></strong> – Research Showcase First Place, $500 Prize (2025)</li>
           <li><strong><a href="https://jshs.org/wp-content/uploads/2024/05/62nd-NJSHS-Abstract-Book.pdf" target="_blank" rel="noopener noreferrer">JSHS Northern California</a></strong> – 2nd Place, $1500 (2024)</li>
-          <li><strong>Synopsys Science Fair (2024)</strong> – 2nd Award, Physical Sciences (2024)</li>
-          <li><strong>Synopsys Science Fair (2024)</strong> – IEEE Special Award (2024)</li>
+          <li><strong>Synopsys Science Fair</strong> – 2nd Award, Physical Sciences (2024, 2025)</li>
+          <li><strong>Synopsys Science Fair</strong> – IEEE Special Award (2024)</li>
         </ul>
         <h4>Publications</h4>
         <ul>
@@ -945,6 +958,10 @@
         <div class="media-container">
           <div class="media-row">
             <div class="media-wrapper">
+              <img src="CopilotPoster.jpg" alt="Copilot Poster" class="media-item" />
+              <p class="media-caption">Copilot Research Poster (<a href="CopilotPoster.pdf" target="_blank">View Enlarged PDF</a>)</p>
+            </div>
+            <div class="media-wrapper">
               <img src="PurdueLab1.jpg" alt="Manikin" class="media-item active" />
               <p class="media-caption">Manikin.</p>
             </div>
@@ -958,12 +975,10 @@
             </div>
           </div>
           <div class="media-row">
-            <!--
             <div class="media-wrapper">
-              <video src="HASELDemo.mov" controls class="media-item"></video>
-              <p class="media-caption">HASEL actuator demonstration video. <a href="https://youtu.be/QlLlkvTnBO4" target="_blank" rel = "noopener noreferrer">Video Link</a></p>
+              <img src="ACIVS_Poster_ID_69.jpg" alt="ACIVS Poster" class="media-item" />
+              <p class="media-caption">ACIVS Conference Poster (<a href="ACIVS_Poster_ID_69.pdf" target="_blank">View Enlarged PDF</a>)</p>
             </div>
-            -->
             <div class="media-wrapper">
               <img src="PurdueACIVS1.jpg" alt="ACIVS Presentation" class="media-item" />
               <p class="media-caption">Presentation at ACIVS 2025 in Tokyo</p>
@@ -985,15 +1000,11 @@
       <p class="tagline" style="text-align:center; white-space: nowrap;">AI Copilot for Trauma Surgery</p>
       <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
       <div class="project-details" style="display: block;">
-        <p>Access to life-saving humanitarian medicine in austere and resource-constrained 
-          environments is crucial to ensuring the health and safety of many around the world. 
-          However, access to high-quality medical care in these conditions is challenging due to 
-          the absence of connectivity and power, limited equipment, and the lack of available 
-          medical expertise. To address these constraints, we propose a memory-augmented 
-          Vision-Language Model (VLM) for action recognition and action anticipation to assist 
-          in medical decision-making and provide real-time intraoperative guidance to 
-          first responders and medical professionals performing life-saving interventions. </p>
-        <p>More to come ...</p>
+        <p>Access to life-saving humanitarian care in natural and man-made emergency conditions is challenging due to limited equipment and medical expertise. AI copilots are transforming surgery by providing real-time assistance, enhancing precision, and improving patient outcomes. I proposed a memory-augmented vision-language model (VLM) for surgical action recognition and anticipation to assist medical decision-making.</p>
+        <p>The proposed architecture consists of two modules: the vision module and the language module. The vision module is based on the MViTv2 transformer, and its outputs are fed into the language module. Because medical actions are often consecutive, with one action consistently performed after another, the language module is augmented with memory of previous actions through concatenating all past actions recognized or anticipated by the vision module. The language module, based on the FlanT5 Large Language Model (LLM) architecture, makes the final prediction on the recognized or anticipated action.</p>
+        <p>The Trauma THOMPSON dataset is employed for model training and validation. The format of the annotation is two words: a verb followed by a noun - for example, <take, swab> with “take being the verb and swab being the “noun”. The train-test split is 80-20.</p>
+        <p>The proposed architecture achieved a Top-1 accuracy of 69.11% on action recognition and 62.13% on anticipation, outperforming the results reported by previous literature.</p>
+        <p>My work is featured in <a href="https://engineering.purdue.edu/IE/news/2025/ai-acivs-zhang-wachs" target="_blank" rel="noopener noreferrer">Purdue IE News</a>.</p>
         <h4>Recognition</h4>
         <ul>
           <li>Synopsys Science and Technology Championship - <a href="https://www.science-fair.org/database/project_awards.php?school_year=2425&all&special_order&_gl=1*1uqobqg*_ga*MTY3NzM5MjIxMS4xNzY3NTk5NDUw*_ga_ECJM45NJHR*czE3Njc1OTk0NDkkbzEkZzEkdDE3Njc1OTk1MjAkajYwJGwwJGgw" target="_blank" rel="noopener noreferrer">2nd Place</a> in Physical Sciences (2025)</li>
