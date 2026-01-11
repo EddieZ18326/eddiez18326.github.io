@@ -12,8 +12,8 @@
     body {
       margin: 0;
       font-family: 'Open Sans', 'Segoe UI', sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
+      background-color: #f6f8fa;
+      color: #1a2636;
       scroll-behavior: smooth;
       font-weight: 400;
     }
@@ -90,8 +90,8 @@
     }
 
     header {
-      background-color: #000000; 
-      color: white;
+      background-color: #183153;
+      color: #f6f8fa;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -101,23 +101,45 @@
       z-index: 1000;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      font-family: 'Montserrat', 'Segoe UI', sans-serif;
-      font-weight: 700;
+    .header-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 0.1rem;
     }
 
+.header-logo-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo-name h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 700;
+}
+
     nav a {
-      color: white;
+      color: #f6f8fa;
       text-decoration: none;
       margin-left: 1.5rem;
       font-weight: 700;
       font-size: 1.1rem;
       font-family: 'Nunito', 'Segoe UI', sans-serif;
+      transition: color 0.2s;
     }
 
     nav a:hover {
+      color: #ff6f61;
       text-decoration: underline;
     }
 
@@ -129,22 +151,23 @@
 
     /* Dropdown button */
     .dropbtn {
-      color: white;
+      color: #f6f8fa;
       text-decoration: none;
       margin-left: 1.5rem;
       font-weight: 700;
       font-size: 1.1rem;
       font-family: 'Nunito', 'Segoe UI', sans-serif;
       cursor: pointer;
+      transition: color 0.2s;
     }
 
     /* Dropdown content (hidden by default) */
     .dropdown-content {
       display: none;
       position: absolute;
-      background-color: #ffffff;
+      background-color: #f6f8fa;
       min-width: 200px;
-      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      box-shadow: 0px 8px 16px rgba(24,49,83,0.15);
       z-index: 1000;
       flex-direction: column;
     }
@@ -156,15 +179,17 @@
 
     /* Style links inside dropdown */
     .dropdown-content a {
-      color: #224488;
+      color: #183153;
       padding: 0.5rem 1rem;
       text-decoration: none;
       display: block;
       font-family: 'Nunito', 'Segoe UI', sans-serif;
+      transition: background 0.2s, color 0.2s;
     }
 
     .dropdown-content a:hover {
-      background-color: #f0f4ff;
+      background-color: #e0f7fa;
+      color: #ff6f61;
     }
 
     #community-service {
@@ -172,9 +197,9 @@
       max-width: 100%;
       margin: auto;
       text-align: center;
-      color: #665500;
+      color: #1a2636;
       margin-bottom: 2rem;
-      background-color: #ffffff;
+      background-color: #f6f8fa;
     }
 
   #community-service .tagline {
@@ -188,9 +213,9 @@
     #awards, #publications {
       padding: 2rem;
       text-align: center;
-      background-color: #ffffff;
+      background-color: #f6f8fa;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(24,49,83,0.07);
     }
 
     #awards {
@@ -213,10 +238,10 @@
       margin-right: auto;
     }
     .award-category {
-      background-color: #f8faff;
+      background-color: #e0f7fa;
       padding: 1.5rem;
       border-radius: 12px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 8px 25px rgba(24,49,83,0.10);
       transition: transform 0.2s ease, box-shadow 0.2s ease;
       font-family: 'Nunito', 'Segoe UI', sans-serif;
     }
@@ -228,7 +253,7 @@
     }
 
     .award-category h3 {
-      color: #224488;
+      color: #009688;
       font-size: 1.2rem;
       margin-bottom: 0.5rem;
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -248,7 +273,7 @@
 
     .award-category li::before {
       content: "• ";
-      color: #4488FF;
+      color: #009688;
     }
 
     .publications-list {
@@ -265,11 +290,13 @@
     }
 
     .publications-list a {
-      color: #224488;
+      color: #009688;
       text-decoration: none;
+      transition: color 0.2s;
     }
 
     .publications-list a:hover {
+      color: #ff6f61;
       text-decoration: underline;
     }
 
@@ -279,8 +306,8 @@
       margin: auto;
       margin-bottom: 2rem;
       border-radius: 14px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      background-color: #ffffff;
+      box-shadow: 0 4px 12px rgba(24,49,83,0.07);
+      background-color: #f6f8fa;
     }
 
     #about {
@@ -288,7 +315,7 @@
     }
 
     h2 {
-      color: #FF4444;
+      color: #ff6f61;
       margin-bottom: 1rem;
       font-size: 1.8rem;
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
@@ -317,18 +344,18 @@
       height: 300px;
       object-fit: cover;
       border-radius: 20px; /* Rounded corners instead of circle */
-      border: 3px solid #FFAA00;
+      border: 3px solid #009688;
     }
     #projects {
       padding: 0.2rem 2rem 2rem 2rem;
     }
 
     .project {
-      background-color: #f8faff;
-      border-left: 4px solid #4488FF;
+      background-color: #e0f7fa;
+      border-left: 4px solid #009688;
       padding: 1.5rem;
       margin-bottom: 2rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(24,49,83,0.08);
       border-radius: 12px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
 
@@ -344,7 +371,7 @@
 
     .project h3 {
       margin-top: 0;
-      color: #224488;
+      color: #009688;
       font-size: 1.4rem;
       font-family: 'Montserrat', 'Segoe UI', sans-serif;
       font-weight: 700;
@@ -389,8 +416,8 @@
     }
 
     .expand-button {
-      background-color: #4488FF;
-      color: white;
+      background-color: #ff6f61;
+      color: #fff;
       border: none;
       padding: 0.5rem 1rem;
       cursor: pointer;
@@ -403,7 +430,7 @@
     }
 
     .expand-button:hover {
-      background-color: #3366cc;
+      background-color: #183153;
     }
 
     .project-details {
@@ -450,7 +477,7 @@
     .scroll-hint {
       text-align: center;
       font-size: 0.9rem;  /* larger text */
-      color: #de900a;
+      color: #009688;
       font-style: italic;
       font-weight: 700;
       margin-top: 0.5rem;
@@ -468,7 +495,7 @@
       overflow: hidden;
       border-radius: 12px;
       padding: 0.5rem;
-      background-color: #f0f4ff;
+      background-color: #e0f7fa;
     }
 
     /* Unified media-container rules for all galleries (horizontal scroll always visible) */
@@ -486,10 +513,10 @@
     /* WebKit scrollbars for all galleries */
     .media-container::-webkit-scrollbar {
       height: 12px;
-      background-color: #f0f4ff;
+      background-color: #e0f7fa;
     }
     .media-container::-webkit-scrollbar-thumb {
-      background-color: #000000;
+      background-color: #009688;
       border-radius: 6px;
     }
 
@@ -617,8 +644,8 @@
     }
 
     .show-more-images-button {
-      background-color: #4488FF;
-      color: white;
+      background-color: #ff6f61;
+      color: #fff;
       border: none;
       padding: 0.5rem 1rem;
       cursor: pointer;
@@ -627,10 +654,11 @@
       font-size: 0.95rem;
       border-radius: 6px;
       margin-top: 0.5rem;
+      transition: background 0.2s;
     }
 
     .show-more-images-button:hover {
-      background-color: #3366cc;
+      background-color: #183153;
     }
 
 
@@ -683,46 +711,48 @@
 <body>
 
 <header>
-    <div style="display: flex; align-items: center;">
-        <img src="logo.jpg" alt="Logo" style="height: 40px; margin-right: 10px;">
-        <h1>Eddie Zhang</h1>
-    </div>
+  <div class="header-flex">
     <nav>
-        <a href="#" onclick="showPage('home'); return false;">Home</a>
-        <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('research'); return false;">Research</a>
-          <div class="dropdown-content">
-            <a href="#" onclick="showPage('research'); document.getElementById('SPIRo').scrollIntoView({behavior:'smooth'}); return false;">SPIRo</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('AICopilot').scrollIntoView({behavior:'smooth'}); return false;">AI Copilot</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('AlgalBlooms').scrollIntoView({behavior:'smooth'}); return false;">Algal Blooms</a>
-            <a href="#" onclick="showPage('research'); document.getElementById('PlanetaryPluse').scrollIntoView({behavior:'smooth'}); return false;">Planetary Pulse</a>
-          </div>
+      <a href="#" onclick="showPage('home'); return false;">Home</a>
+      <div class="dropdown">
+        <a href="#" class="dropbtn" onclick="showPage('research'); return false;">Research</a>
+        <div class="dropdown-content">
+          <a href="#" onclick="showPage('research'); document.getElementById('SPIRo').scrollIntoView({behavior:'smooth'}); return false;">SPIRo</a>
+          <a href="#" onclick="showPage('research'); document.getElementById('AICopilot').scrollIntoView({behavior:'smooth'}); return false;">AI Copilot</a>
+          <a href="#" onclick="showPage('research'); document.getElementById('AlgalBlooms').scrollIntoView({behavior:'smooth'}); return false;">Algal Blooms</a>
+          <a href="#" onclick="showPage('research'); document.getElementById('PlanetaryPluse').scrollIntoView({behavior:'smooth'}); return false;">Planetary Pulse</a>
         </div>
-        <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('entrepreneurship'); return false;">Entrepreneurship</a>
-          <div class="dropdown-content">
-            <a href="#" onclick="showPage('entrepreneurship'); document.getElementById('EnviroAI').scrollIntoView({behavior:'smooth'}); return false;">Enviro-AI</a>
-            <a href="#" onclick="showPage('entrepreneurship'); document.getElementById('3DSolutions').scrollIntoView({behavior:'smooth'}); return false;">3DSolutions.shop</a>
-          </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn" onclick="showPage('entrepreneurship'); return false;">Entrepreneurship</a>
+        <div class="dropdown-content">
+          <a href="#" onclick="showPage('entrepreneurship'); document.getElementById('EnviroAI').scrollIntoView({behavior:'smooth'}); return false;">Enviro-AI</a>
+          <a href="#" onclick="showPage('entrepreneurship'); document.getElementById('3DSolutions').scrollIntoView({behavior:'smooth'}); return false;">3DSolutions.shop</a>
         </div>
-        <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activites</a>
-          <div class="dropdown-content">
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('Rocketry').scrollIntoView({behavior:'smooth'}); return false;">RC Aircraft</a>
-            <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
-          </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn" onclick="showPage('community'); return false;">Leadership in Community</a>
+        <div class="dropdown-content">
+          <a href="#" onclick="showPage('community'); document.getElementById('STEMWorkshops').scrollIntoView({behavior:'smooth'}); return false;">STEM Workshops</a>
+          <a href="#" onclick="showPage('community'); document.getElementById('FTC_Coaching').scrollIntoView({behavior:'smooth'}); return false;">FTC Robotics Coaching</a>
+          <a href="#" onclick="showPage('community'); document.getElementById('RCPlanes').scrollIntoView({behavior:'smooth'}); return false;">Introduction to RC Airplanes</a>
+          <a href="#" onclick="showPage('community'); document.getElementById('TennisCoaching').scrollIntoView({behavior:'smooth'}); return false;">Tennis Coaching</a>
         </div>
-        <div class="dropdown">
-          <a href="#" class="dropbtn" onclick="showPage('community'); return false;">Leadership in Community</a>
-          <div class="dropdown-content">
-            <a href="#" onclick="showPage('community'); document.getElementById('STEMWorkshops').scrollIntoView({behavior:'smooth'}); return false;">STEM Workshops</a>
-            <a href="#" onclick="showPage('community'); document.getElementById('FTC_Coaching').scrollIntoView({behavior:'smooth'}); return false;">FTC Robotics Coaching</a>
-            <a href="#" onclick="showPage('community'); document.getElementById('RCPlanes').scrollIntoView({behavior:'smooth'}); return false;">Introduction to RC Airplanes</a>
-            <a href="#" onclick="showPage('community'); document.getElementById('TennisCoaching').scrollIntoView({behavior:'smooth'}); return false;">Tennis Coaching</a>
-          </div>
+      </div>
+      <div class="dropdown">
+        <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activites</a>
+        <div class="dropdown-content">
+          <a href="#" onclick="showPage('stem-projects'); document.getElementById('Rocketry').scrollIntoView({behavior:'smooth'}); return false;">RC Aircraft</a>
+          <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
         </div>
-        <!-- <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> -->
+      </div>
+      <!-- <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> -->
     </nav>
+    <div class="header-logo-name">
+      <h1>Eddie Zhang</h1>
+      <img src="logo.jpg" alt="Logo" style="height: 40px; margin-left: 10px;">
+    </div>
+  </div>
 </header> 
 
 <div id="page-home">
