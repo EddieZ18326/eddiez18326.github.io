@@ -340,7 +340,7 @@
     }
 
     .about-photo {
-      width: 275px;
+      width: 400px;
       height: 300px;
       object-fit: cover;
       border-radius: 20px; /* Rounded corners instead of circle */
@@ -740,10 +740,11 @@
         </div>
       </div>
       <div class="dropdown">
-        <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activites</a>
+        <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activities & Awards</a>
         <div class="dropdown-content">
           <a href="#" onclick="showPage('stem-projects'); document.getElementById('Rocketry').scrollIntoView({behavior:'smooth'}); return false;">RC Aircraft</a>
           <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
+          <a href="#" onclick="showPage('stem-projects'); document.getElementById('awards').scrollIntoView({behavior:'smooth'}); return false;">Awards</a>
         </div>
       </div>
       <!-- <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a> -->
@@ -813,10 +814,6 @@
               <p class="media-caption">SPIRo at Conrad Challenge event.</p>
             </div>
             <div class="media-wrapper">
-              <img src="SPIRoMETEC1.jpg" alt="SPIRo main" class="media-item active" />
-              <p class="media-caption">Getting SPIRo sensors calibrated before testing</p>
-            </div>
-            <div class="media-wrapper">
               <img src="METEC 6.png" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">Working with METEC Staff</p>
             </div>
@@ -831,6 +828,10 @@
             <div class="media-wrapper">
               <img src="METEC3.png" alt="SPIRo main" class="media-item active" />
               <p class="media-caption">SPIRo at METEC</p>
+            </div>
+            <div class="media-wrapper">
+              <img src="SPIRoMETEC1.jpg" alt="SPIRo main" class="media-item active" />
+              <p class="media-caption">Getting SPIRo sensors calibrated before testing</p>
             </div>
             <div class="media-wrapper">
               <img src="HomeLab.png" alt="SPIRo main" class="media-item active" />
@@ -1400,7 +1401,7 @@
 <!-- STEM Projects Page -->
 <div id="page-stem-projects" style="display:none">
   <section id="stem-projects-section">
-    <h2>Leadership in STEM & Debate</h2>
+    <h2>Activities</h2>
     <div class="project" id="Rocketry">
       <h3>Remote Control Aircraft</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
