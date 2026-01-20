@@ -744,7 +744,8 @@
       <div class="dropdown">
         <a href="#" class="dropbtn" onclick="showPage('stem-projects'); return false;">Activities & Awards</a>
         <div class="dropdown-content">
-          <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge Robots</a>
+          <a href="#" onclick="showPage('stem-projects'); document.getElementById('FRC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Robotics Competition</a>
+          <a href="#" onclick="showPage('stem-projects'); document.getElementById('FTC').scrollIntoView({behavior:'smooth'}); return false;">FIRST Tech Challenge</a>
           <a href="#" onclick="showPage('stem-projects'); document.getElementById('awards').scrollIntoView({behavior:'smooth'}); return false;">Awards</a>
         </div>
       </div>
@@ -1415,6 +1416,74 @@
 <div id="page-stem-projects" style="display:none">
   <section id="stem-projects-section">
     <h2>Activities</h2>
+        <div class="project" id="FRC">
+          <h3>FIRST Robotics Competition (FRC) Robots</h3>
+          <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
+          <div class="media-gallery">
+            <div class="media-container">
+              <div class="media-row">
+                <div class="media-wrapper">
+                  <img src="FRC1.png" alt="FRC Team" class="media-item active" />
+                  <p class="media-caption">FRC Team at competition.</p>
+                </div>
+                <div class="media-wrapper">
+                  <img src="FRC2.png" alt="FRC Robot" class="media-item active" />
+                  <p class="media-caption">FRC robot in action.</p>
+                </div>
+                <div class="media-wrapper">
+                  <img src="FRC3.png" alt="FRC3" class="media-item active" />
+                  <p class="media-caption">FRC3</p>
+                </div>
+                <div class="media-wrapper">
+                  <img src="FRC4.png" alt="FRC4" class="media-item active" />
+                  <p class="media-caption">FRC4</p>
+                </div>
+                <div class="media-wrapper">
+                  <img src="FRC5.JPG" alt="FRC5" class="media-item active" />
+                  <p class="media-caption">FRC5</p>
+                </div>
+                <div class="media-wrapper">
+                  <img src="FRC6.png" alt="FRC6" class="media-item active" />
+                  <p class="media-caption">FRC6</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="tagline" style="text-align:center;">FRC Robots at Harker</p>
+          <button class="expand-button" onclick="toggleDetails(this)">Show Less</button>
+          <div class="project-details" style="display: block;">
+            <p>
+              I was the software lead on Harker’s FIRST Robotics Competition (FRC) team from 2022 to 2024. 
+              These robots are built around a specific set of rules and regulations, and they accomplish different 
+              robot game missions from shooting and scoring game pieces to climbing at the end of a match.
+            </p>
+            <p>
+              In the 2023 season, our robot featured an angled elevator that extended forwards to reach three different 
+              scoring positions as well as a game piece collecting station. To control this elevator, I implemented 
+              PID motion control using the motor encoders of the robot, tuning this feedback controller to achieve smooth, 
+              accurate, and consistent extension distances. The robot also featured a swerve drivetrain, 
+              which I programmed using PIDs, gyroscopes, and feedforward motion controllers. 
+              Finally, I also developed a pitch alignment algorithm that helped the robot balance on a 
+              moving platform at the end of each match.      
+            </p>
+            <p>
+              In the 2024 season, I continued to develop upon the swerve drivetrain, as well as implemented an adjustable 
+              shooter to shoot rings in two different scoring positions. The robot featured a ground intake, 
+              and the shooter was controlled with Limelight cameras that helped to align the robot with the target and 
+              calculate the velocity and angle at which a game piece would need to be shot in order to score through 
+              neural network keypoint detection algorithms. 
+            </p>
+            <h4>Awards</h4>
+            <ul>
+              <li>2023 Central Valley Regional Judges Award</li>
+              <li>2023 Sacramento Regional Impact Award</li>
+              <li>2023 FRC World Championship Qualifying Team</li>
+              <li>2024 Sacramento Regional Finalist Alliance</li>
+              <li>2024 Sacramento Regional Gracious Professionalism Award</li>
+              <li>2024 Monterey Bay Regional Judges Award</li>
+            </ul>
+          </div>
+        </div>
     <div class="project" id="FTC">
       <h3>FIRST Tech Challenge (FTC) Robots</h3>
       <div class="scroll-hint">↔ Scroll sideways, drag the bar at the bottom, or use arrow keys to navigate galleries</div>
